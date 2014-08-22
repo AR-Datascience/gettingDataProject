@@ -34,18 +34,66 @@ __Activity__ (factor) - Values:
 
 Activities being carried out by individuals identified by "Subject" and measured with smartphones.
 
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+*Acc*: identifies accelerometer measured data
 
-For each record it is provided:
-======================================
+*Gyro*: identifies gyroscope measured data
 
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
-- Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
-- Its activity label. 
-- An identifier of the subject who carried out the experiment.
+(X-Y-Z): indicates three variables for measures taken on the X, Y and Z axis
 
-- Features are normalized and bounded within [-1,1].
+MEAN: indicates mean values for the identified measure
+
+SD: indicates standard deviation values for the identified measures
+
+__Time-related measures__
+
+TimeBodyAcc-MEAN-(X-Y-Z)
+TimeGravityAcc-MEAN-(X-Y-Z)
+TimeBodyAccJerk-MEAN-(X-Y-Z)
+TimeBodyGyro-MEAN-(X-Y-Z)
+TimeBodyGyroJerk-MEAN-(X-Y-Z)
+TimeBodyAccMag-MEAN
+TimeGravityAccMag-MEAN
+TimeBodyAccJerkMag-MEAN
+TimeBodyGyroMag-MEAN
+TimeBodyGyroJerkMag-MEAN
+
+TimeBodyAcc-SD-(X-Y-Z)
+TimeGravityAcc-SD-(X-Y-Z)
+TimeBodyAccJerk-SD-(X-Y-Z)
+TimeBodyGyro-SD-(X-Y-Z)
+TimeBodyGyroJerk-SD-(X-Y-Z)
+TimeBodyAccMag-SD
+TimeGravityAccMag-SD
+TimeBodyAccJerkMag-SD
+TimeBodyGyroMag-SD
+TimeBodyGyroJerkMag-SD
+
+__Frequency-related measures__
+
+FrequencyBodyAcc-MEAN-(X-Y-Z)
+FrequencyBodyAcc-MEANFreq-(X-Y-Z)
+FrequencyBodyAccJerk-MEAN-(X-Y-Z)
+FrequencyBodyAccJerk-MEANFreq-(X-Y-Z)
+FrequencyBodyGyro-MEAN-(X-Y-Z)
+FrequencyBodyGyro-MEANFreq-(X-Y-Z)
+FrequencyBodyAccMag-MEAN
+FrequencyBodyAccMag-MEANFreq
+FrequencyBodyBodyAccJerkMag-MEAN
+FrequencyBodyBodyAccJerkMag-MEANFreq
+FrequencyBodyBodyGyroMag-MEAN
+FrequencyBodyBodyGyroMag-MEANFreq
+FrequencyBodyBodyGyroJerkMag-MEAN
+FrequencyBodyBodyGyroJerkMag-MEANFreq
+FrequencyBodyAcc-SD-(X-Y-Z)
+FrequencyBodyAccJerk-SD-(X-Y-Z)
+FrequencyBodyGyro-SD-(X-Y-Z)
+FrequencyBodyAccMag-SD
+FrequencyBodyBodyAccJerkMag-SD
+
+
+## How the data provided in the dataset were processed to obtain the final tidy data dataset ##
+The steps executed on the given dataset to clean-up the data are described in detail step-by-step with comments in the script file run_analysis.R.
+They are summarized below:
+
 
