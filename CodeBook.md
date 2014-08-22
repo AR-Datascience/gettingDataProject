@@ -60,7 +60,6 @@ __Time-related measures__
 - TimeBodyAccJerkMag-MEAN
 - TimeBodyGyroMag-MEAN
 - TimeBodyGyroJerkMag-MEAN
-
 - TimeBodyAcc-SD-(X-Y-Z)
 - TimeGravityAcc-SD-(X-Y-Z)
 - TimeBodyAccJerk-SD-(X-Y-Z)
@@ -69,34 +68,57 @@ __Time-related measures__
 - TimeBodyAccMag-SD
 - TimeGravityAccMag-SD
 - TimeBodyAccJerkMag-SD
-TimeBodyGyroMag-SD
-TimeBodyGyroJerkMag-SD
+- TimeBodyGyroMag-SD
+- TimeBodyGyroJerkMag-SD
 
 __Frequency-related measures__
 
-FrequencyBodyAcc-MEAN-(X-Y-Z)
-FrequencyBodyAcc-MEANFreq-(X-Y-Z)
-FrequencyBodyAccJerk-MEAN-(X-Y-Z)
-FrequencyBodyAccJerk-MEANFreq-(X-Y-Z)
-FrequencyBodyGyro-MEAN-(X-Y-Z)
-FrequencyBodyGyro-MEANFreq-(X-Y-Z)
-FrequencyBodyAccMag-MEAN
-FrequencyBodyAccMag-MEANFreq
-FrequencyBodyBodyAccJerkMag-MEAN
-FrequencyBodyBodyAccJerkMag-MEANFreq
-FrequencyBodyBodyGyroMag-MEAN
-FrequencyBodyBodyGyroMag-MEANFreq
-FrequencyBodyBodyGyroJerkMag-MEAN
-FrequencyBodyBodyGyroJerkMag-MEANFreq
-FrequencyBodyAcc-SD-(X-Y-Z)
-FrequencyBodyAccJerk-SD-(X-Y-Z)
-FrequencyBodyGyro-SD-(X-Y-Z)
-FrequencyBodyAccMag-SD
-FrequencyBodyBodyAccJerkMag-SD
+- FrequencyBodyAcc-MEAN-(X-Y-Z)
+- FrequencyBodyAcc-MEANFreq-(X-Y-Z)
+- FrequencyBodyAccJerk-MEAN-(X-Y-Z)
+- FrequencyBodyAccJerk-MEANFreq-(X-Y-Z)
+- FrequencyBodyGyro-MEAN-(X-Y-Z)
+- FrequencyBodyGyro-MEANFreq-(X-Y-Z)
+- FrequencyBodyAccMag-MEAN
+- FrequencyBodyAccMag-MEANFreq
+- FrequencyBodyBodyAccJerkMag-MEAN
+- FrequencyBodyBodyAccJerkMag-MEANFreq
+- FrequencyBodyBodyGyroMag-MEAN
+- FrequencyBodyBodyGyroMag-MEANFreq
+- FrequencyBodyBodyGyroJerkMag-MEAN
+- FrequencyBodyBodyGyroJerkMag-MEANFreq
+- FrequencyBodyAcc-SD-(X-Y-Z)
+- FrequencyBodyAccJerk-SD-(X-Y-Z)
+- FrequencyBodyGyro-SD-(X-Y-Z)
+- FrequencyBodyAccMag-SD
+- FrequencyBodyBodyAccJerkMag-SD
 
 
 ## How the data provided in the dataset were processed to obtain the final tidy data dataset ##
-The steps executed on the given dataset to clean-up the data are described in detail step-by-step with comments in the script file run_analysis.R.
+The steps executed on the given dataset to clean-up the data in the original dataset, are described in detail step-by-step with comments in the script file run_analysis.R.
 They are summarized below:
+
+1. Load data into R
+    The following files are loaded:
+    - activity_labels.txt
+    - features.txt
+    - ./train/X_train.txt
+    - ./train/Y_train.txt
+    - ./train/subject_train.txt
+    - ./test/X_test.txt
+    - ./test/Y_test.txt
+    - ./test/subject_test.txt
+
+2. Combine the subject-activities-measurements data and the train and test sets
+
+3. Replace the numeric values identifying the activities with their descriptive values (provided in the file activity_labels.txt)
+
+4. Replace the generic names of the measured variables with the feature names provided in the file features.txt
+
+5. Create a new data set by extracting from the dataset produced at step 5 only the measurements on the mean and standard deviation
+
+6. Create the final tidy data dataset by aggregating the values by Subject and Activity and taking the mean of the measured variables
+
+7. Finally export the tidy dataset in the file **tidy_dataset.txt** 
 
 
