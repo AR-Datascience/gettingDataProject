@@ -24,6 +24,7 @@ __Subject__ (numeric)
 Id identifying the subject for which measurements were taken
 
 __Activity__ (factor) - Values: 
+
 1. WALKING
 2. WALKING_UPSTAIRS
 3. WALKING_DOWNSTAIRS
