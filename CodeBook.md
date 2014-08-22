@@ -34,6 +34,9 @@ __Activity__ (factor) - Values:
 
 Activities being carried out by individuals identified by "Subject" and measured with smartphones.
 
+__Smartphone sensors measurements__
+
+In the following variables, the conventions described below are adopted:
 
 *Acc*: identifies accelerometer measured data
 
@@ -47,25 +50,25 @@ SD: indicates standard deviation values for the identified measures
 
 __Time-related measures__
 
-TimeBodyAcc-MEAN-(X-Y-Z)
-TimeGravityAcc-MEAN-(X-Y-Z)
-TimeBodyAccJerk-MEAN-(X-Y-Z)
-TimeBodyGyro-MEAN-(X-Y-Z)
-TimeBodyGyroJerk-MEAN-(X-Y-Z)
-TimeBodyAccMag-MEAN
-TimeGravityAccMag-MEAN
-TimeBodyAccJerkMag-MEAN
-TimeBodyGyroMag-MEAN
-TimeBodyGyroJerkMag-MEAN
+- TimeBodyAcc-MEAN-(X-Y-Z)
+- TimeGravityAcc-MEAN-(X-Y-Z)
+- TimeBodyAccJerk-MEAN-(X-Y-Z)
+- TimeBodyGyro-MEAN-(X-Y-Z)
+- TimeBodyGyroJerk-MEAN-(X-Y-Z)
+- TimeBodyAccMag-MEAN
+- TimeGravityAccMag-MEAN
+- TimeBodyAccJerkMag-MEAN
+- TimeBodyGyroMag-MEAN
+- TimeBodyGyroJerkMag-MEAN
 
-TimeBodyAcc-SD-(X-Y-Z)
-TimeGravityAcc-SD-(X-Y-Z)
-TimeBodyAccJerk-SD-(X-Y-Z)
-TimeBodyGyro-SD-(X-Y-Z)
-TimeBodyGyroJerk-SD-(X-Y-Z)
-TimeBodyAccMag-SD
-TimeGravityAccMag-SD
-TimeBodyAccJerkMag-SD
+- TimeBodyAcc-SD-(X-Y-Z)
+- TimeGravityAcc-SD-(X-Y-Z)
+- TimeBodyAccJerk-SD-(X-Y-Z)
+- TimeBodyGyro-SD-(X-Y-Z)
+- TimeBodyGyroJerk-SD-(X-Y-Z)
+- TimeBodyAccMag-SD
+- TimeGravityAccMag-SD
+- TimeBodyAccJerkMag-SD
 TimeBodyGyroMag-SD
 TimeBodyGyroJerkMag-SD
 
