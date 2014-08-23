@@ -1,9 +1,18 @@
 # README #
-## explaining how the given datasets were processed to obtain tidy data ##
+explaining how to use the script file run_analysis.R to process the UCI HAR dataset
+and obtain the file tidy_dataset.txt processed following the instructions given 
+for the project
 
-The following files  were used as input data:
+Download the data from
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+and unpack the zip file in the current directory
+a directory named "UCI HAR Dataset" will be created. This must be the current working directory when you launch R or R studio
 
-- ./
+The instruction in the run_analysis.R file will upload the necessary files for the analysis.
+
+The following files are used as input data:
+
+from the current working directory
 - activity_labels.txt
 - features.txt
 - features_info.txt
@@ -11,45 +20,23 @@ The following files  were used as input data:
 - test
 - train
 
-in the *./test* directory:
-- Inertial Signals
+from the ./test* directory:
 - X_test.txt
 - subject_test.txt
 - y_test.txt
 
-in the *./test/Inertial Signals* directory:
-- body_acc_x_test.txt
-- body_acc_y_test.txt
-- body_acc_z_test.txt
-- body_gyro_x_test.txt
-- body_gyro_y_test.txt
-- body_gyro_z_test.txt
-- total_acc_x_test.txt
-- total_acc_y_test.txt
-- total_acc_z_test.txt
-
-in the * ./train* directiry:
-- Inertial Signals
+from the  ./train* directiry:
 - X_train.txt
 - subject_train.txt
 - y_train.txt
 
-in the * ./train/Inertial Signals* directory:
-- body_acc_x_train.txt
-- body_acc_y_train.txt
-- body_acc_z_train.txt
-- body_gyro_x_train.txt
-- body_gyro_y_train.txt
-- body_gyro_z_train.txt
-- total_acc_x_train.txt
-- total_acc_y_train.txt
-- total_acc_z_train.txt
+Execute the run_analysis.R script in R or R studio setting as current working directory the directory where you placed the "UCI HAR Dataset" folder.
 
-The steps followed are contained in the script file: run_analysis.R (as requested).
-Basically, the steps are the following:
+The script will produce the file tidy_dataset.txt in the current working directory which will contain the dataset processed
+according to the instructions given for the project, i.e.:
 
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names. 
+1. Merge the training and the test sets to create one data set.
+2. Extract only the measurements on the mean and standard deviation for each measurement. 
+3. Use descriptive activity names to name the activities in the data set
+4. Appropriately label the data set with descriptive variable names. 
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
